@@ -21,6 +21,7 @@ namespace Personal_Library
         //SqlCommand cmd;
         SQL_using book_sql = new SQL_using();
         string imgPath;
+        byte[] img = null;
 
         public add_data()
         {
@@ -34,7 +35,6 @@ namespace Personal_Library
                 try
                 {
                     //---for image use---
-                    byte[] img = null;
                     if (imgPath != null)
                     {
                         FileStream fs = new FileStream(imgPath, FileMode.Open, FileAccess.Read);
@@ -50,7 +50,7 @@ namespace Personal_Library
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.Message);
                 }
             }
         }
@@ -76,7 +76,7 @@ namespace Personal_Library
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
         }
         //----------------------------

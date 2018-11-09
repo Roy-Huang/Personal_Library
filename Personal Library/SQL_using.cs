@@ -56,13 +56,44 @@ namespace Personal_Library
                 Console.WriteLine(ex.Message);
             }
         }
+        public void edit_sql_data(string edit_select_isbn, string edit_bookname, string edit_author, string edit_PHouse, byte[] edit_img)
+        {
+            con2sql = new SqlConnection(SQL_Database);
+            sqlcmd = new SqlCommand("Update Lib_Table SET bookname = @bookname, " +
+                "author =  @author, publishinghouse = @publishinghouse, bookimage = @bookimage WHERE ISBN = " + edit_select_isbn, con2sql);
+            con2sql.Open();
+            sqlcmd.Parameters.AddWithValue("@bookname", edit_bookname);
+            sqlcmd.Parameters.AddWithValue("@author", edit_author);
+            sqlcmd.Parameters.AddWithValue("@publishinghouse", edit_PHouse);
+            if (edit_img == null)
+            {
+                sqlcmd.Parameters.Add("@bookimage", SqlDbType.Image).Value = DBNull.Value;
+            }
+            else
+            {
+                sqlcmd.Parameters.AddWithValue("@bookimage", edit_img);
+            }
+            sqlcmd.ExecuteNonQuery();          
+            con2sql.Close();
+        }
         public DataTable inquire_sql_AllBookInfo(string inquire_item, string inquire_datatable)
         {
-            con2sql = new SqlConnection(SQL_Database);           
-            con2sql.Open();
+            con2sql = new SqlConnection(SQL_Database);
             string sql_inquireInfo_cmd = "select " + inquire_item + " From " + inquire_datatable; //Inquire command   
+            con2sql.Open();          
             sqlcmd = new SqlCommand(sql_inquireInfo_cmd, con2sql);                                //use sqlcommand ,so... need sql open before
             SqlDataReader reader_bookinfo = sqlcmd.ExecuteReader();
+            //----------------------------------------------------
+            //reader_bookinfo.Read();
+            //testread_str = new string[5];
+            //while (reader_bookinfo.Read())
+            //{
+
+            //    testread_str[count] = Convert.ToString(reader_bookinfo.GetValue(count));
+            //    count++;
+            //    Array.Resize(ref testread_str, count+1);
+            //}
+            //-----------------------------------------------------
             table_bookinfo = new DataTable();
             table_bookinfo.Load(reader_bookinfo);
             //---rename to chinsese---

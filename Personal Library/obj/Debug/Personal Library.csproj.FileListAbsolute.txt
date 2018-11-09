@@ -19,3 +19,4 @@ D:\Code\Git\Personal_Library\Personal Library\obj\Debug\Personal Library.csproj.
 D:\Code\Git\Personal_Library\Personal Library\obj\Debug\Personal Library.exe
 D:\Code\Git\Personal_Library\Personal Library\obj\Debug\Personal Library.pdb
 D:\Code\Git\Personal_Library\Personal Library\obj\Debug\Personal_Library.add_data.resources
+D:\Code\Git\Personal_Library\Personal Library\obj\Debug\Personal_Library.edit_data.resources

@@ -52,6 +52,12 @@
     <Compile Include="add_data.Designer.cs">
       <DependentUpon>add_data.cs</DependentUpon>
     </Compile>
+    <Compile Include="edit_data.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_data.Designer.cs">
+      <DependentUpon>edit_data.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="SQL_using.cs" />
     <EmbeddedResource Include="add_data.resx">
       <DependentUpon>add_data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_data.resx">
+      <DependentUpon>edit_data.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

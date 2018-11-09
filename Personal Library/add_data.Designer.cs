@@ -145,7 +145,7 @@
             // pictureBox_BookImage
             // 
             this.pictureBox_BookImage.BackColor = System.Drawing.Color.LightGray;
-            this.pictureBox_BookImage.Location = new System.Drawing.Point(404, 12);
+            this.pictureBox_BookImage.Location = new System.Drawing.Point(404, 44);
             this.pictureBox_BookImage.Name = "pictureBox_BookImage";
             this.pictureBox_BookImage.Size = new System.Drawing.Size(184, 210);
             this.pictureBox_BookImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -155,7 +155,7 @@
             // 
             // button_add_data2sql
             // 
-            this.button_add_data2sql.Location = new System.Drawing.Point(424, 230);
+            this.button_add_data2sql.Location = new System.Drawing.Point(427, 265);
             this.button_add_data2sql.Name = "button_add_data2sql";
             this.button_add_data2sql.Size = new System.Drawing.Size(139, 33);
             this.button_add_data2sql.TabIndex = 4;
@@ -179,11 +179,11 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("PMingLiU", 11F);
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(421, 283);
+            this.label5.Location = new System.Drawing.Point(416, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 15);
+            this.label5.Size = new System.Drawing.Size(172, 15);
             this.label5.TabIndex = 6;
-            this.label5.Text = "點擊圖片框框可傳圖片";
+            this.label5.Text = "◎點擊圖片框框可傳圖片";
             // 
             // button_cancel
             // 

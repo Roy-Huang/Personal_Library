@@ -51,6 +51,7 @@ namespace Personal_Library
             }
         }
 
+
         private void button_update_page_Click(object sender, EventArgs e)
         {
             add_data add_data_view = new add_data();
@@ -79,5 +80,17 @@ namespace Personal_Library
                // MessageBox.Show(ex.Message);
             }
         }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            //---get selected row index number---
+            int rowIndex = dataGridView_Book_info.CurrentRow.Index;
+            string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value);    //cells[0] is ISBN position
+
+            edit_data edit_data_view = new edit_data(selectISBN);
+            this.Visible = false;
+            edit_data_view.Visible = true;
+        }
+        
     }
 }

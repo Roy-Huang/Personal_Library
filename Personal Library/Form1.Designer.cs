@@ -32,6 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button_update_page = new System.Windows.Forms.Button();
             this.button_del_data = new System.Windows.Forms.Button();
+            this.button_edit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Book_info)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             // 
             // button_del_data
             // 
-            this.button_del_data.Location = new System.Drawing.Point(498, 305);
+            this.button_del_data.Location = new System.Drawing.Point(498, 292);
             this.button_del_data.Name = "button_del_data";
             this.button_del_data.Size = new System.Drawing.Size(139, 33);
             this.button_del_data.TabIndex = 3;
@@ -77,12 +78,24 @@
             this.button_del_data.UseVisualStyleBackColor = true;
             this.button_del_data.Click += new System.EventHandler(this.button_del_data_Click);
             // 
+            // button_edit
+            // 
+            this.button_edit.Font = new System.Drawing.Font("PMingLiU", 9F);
+            this.button_edit.Location = new System.Drawing.Point(498, 341);
+            this.button_edit.Name = "button_edit";
+            this.button_edit.Size = new System.Drawing.Size(139, 33);
+            this.button_edit.TabIndex = 4;
+            this.button_edit.Text = "修改書籍資料";
+            this.button_edit.UseVisualStyleBackColor = true;
+            this.button_edit.Click += new System.EventHandler(this.button_edit_Click);
+            // 
             // Main_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(675, 440);
+            this.Controls.Add(this.button_edit);
             this.Controls.Add(this.button_del_data);
             this.Controls.Add(this.button_update_page);
             this.Controls.Add(this.pictureBox1);
@@ -105,6 +118,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button_update_page;
         private System.Windows.Forms.Button button_del_data;
+        private System.Windows.Forms.Button button_edit;
     }
 }
 
