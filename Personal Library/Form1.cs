@@ -39,7 +39,7 @@ namespace Personal_Library
             try
             {
                 //---get index number cell 0 value(type is object)---
-                string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value); //cells[0] is ISBN position
+                string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value); //cells[0] is ISBN 
 
                 pictureBox1.Image = Image.FromStream(book_sql.inquire_sql_BookImg(selectISBN));
                // con2sql.Close();
@@ -62,7 +62,7 @@ namespace Personal_Library
         {
             //---get selected row index number---
             int rowIndex = dataGridView_Book_info.CurrentRow.Index;
-            string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value);    //cells[0] is ISBN position
+            string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value);    //cells[0] is ISBN 
             book_sql.del_sql_data(selectISBN);
             update_GridView_loadData();
         }
@@ -85,9 +85,9 @@ namespace Personal_Library
         {
             //---get selected row index number---
             int rowIndex = dataGridView_Book_info.CurrentRow.Index;
-            string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value);    //cells[0] is ISBN position
-
-            edit_data edit_data_view = new edit_data(selectISBN);
+            string selectISBN = Convert.ToString(dataGridView_Book_info.Rows[rowIndex].Cells[0].Value);    //cells[0] is ISBN 
+            
+            edit_data edit_data_view = new edit_data(rowIndex, selectISBN);
             this.Visible = false;
             edit_data_view.Visible = true;
         }

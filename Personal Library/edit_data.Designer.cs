@@ -129,6 +129,7 @@
             this.textBox_ISBN.Font = new System.Drawing.Font("Mongolian Baiti", 14F);
             this.textBox_ISBN.Location = new System.Drawing.Point(216, 23);
             this.textBox_ISBN.Name = "textBox_ISBN";
+            this.textBox_ISBN.ReadOnly = true;
             this.textBox_ISBN.Size = new System.Drawing.Size(146, 29);
             this.textBox_ISBN.TabIndex = 0;
             // 
@@ -171,6 +172,7 @@
             this.button_cancel.TabIndex = 10;
             this.button_cancel.Text = "取消";
             this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
             // button_edit_data2sql
             // 
