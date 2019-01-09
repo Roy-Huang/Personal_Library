@@ -99,4 +99,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)\Library_Book_list.mdf" "$(TargetDir)" /Y
+copy "$(ProjectDir)\Library_Book_list_log.ldf" "$(TargetDir)" /Y</PostBuildEvent>
+  </PropertyGroup>
 </Project>
